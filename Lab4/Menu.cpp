@@ -24,6 +24,7 @@ HashTable* ShowMenu()
 
 	cout << "\nВыберите операцию: ";
 	cin >> number;
+	CheckInt();
 
 	try 
 	{
@@ -32,6 +33,7 @@ HashTable* ShowMenu()
 		case 1:
 			cout << "\nВведите размер словаря: ";
 			cin >> size;
+			CheckInt();
 
 			::table = CreateHashTable(size);
 			break;
@@ -45,6 +47,7 @@ HashTable* ShowMenu()
 			CheckTable(::table);
 			cout << "Введите ключ, который хотите удалить: ";
 			cin >> key;
+			CheckInt();
 
 			::table = DeleteKey(::table, key);
 			ShowHashTable(::table);
@@ -53,10 +56,12 @@ HashTable* ShowMenu()
 			CheckTable(::table);
 			cout << "Введите ключ, который хотите найти: ";
 			cin >> key;
+			CheckInt();
 
 			cout << endl << FindKey(::table, key) << endl;
 			break;
 		default:
+			throw invalid_argument("\nНет такого варианта!");
 			break;
 		}
 	}

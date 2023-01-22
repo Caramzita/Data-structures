@@ -253,3 +253,13 @@ void ClearHashTable(HashTable* table)
 	free(table->items);
 	free(table);
 }
+
+void CheckInt()
+{
+	if (!cin)
+	{
+		cin.clear();
+		cin.ignore();
+		cout << "\nНеверный формат!\n";
+	}
+}

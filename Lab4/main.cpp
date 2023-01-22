@@ -17,9 +17,9 @@ int main()
 
         cout << endl << "Введите 1 для продолжения или 0 для завершения программы: ";
         cin >> Continue;
+        CheckInt();
         cout << endl;
-    }
-    while(Continue > 0 && Continue < 2);
+    } while (Continue > 0 && Continue < 2);
 
     ClearHashTable(table);
 }

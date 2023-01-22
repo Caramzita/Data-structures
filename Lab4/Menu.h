@@ -2,3 +2,5 @@
 #include "HashTable.h"
 
 HashTable* ShowMenu();
+
+void CheckInt();

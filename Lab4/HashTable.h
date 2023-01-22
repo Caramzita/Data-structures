@@ -30,3 +30,5 @@ void ShowHashTable(HashTable* table);
 void CheckTable(HashTable* table);
 
 void ClearHashTable(HashTable* table);
+
+void CheckInt();
