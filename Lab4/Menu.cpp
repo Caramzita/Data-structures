@@ -39,8 +39,8 @@ HashTable* ShowMenu()
 			break;
 		case 2:
 			CheckTable(::table);
-			::item = CreateItem();
-			::table = AddKey(::table, ::item);
+			item = CreateItem();
+			::table = AddKey(::table, item);
 			ShowHashTable(::table);
 			break;
 		case 3:

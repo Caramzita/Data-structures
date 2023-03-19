@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h>
 
 using namespace std;
 
@@ -82,7 +83,9 @@ HashTable* AddKey(HashTable* table, HashItem* item)
 		throw invalid_argument("\nСловарь заполнен!");
 	}
 
-	if ((static_cast<double>(table->count) / table->size) > 0.70)
+	double growthFactor = (static_cast<double>(table->count) / table->size);
+
+	if (growthFactor > 0.75)
 	{
 		table = Rehashing(table);
 	}
